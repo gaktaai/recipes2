@@ -11,4 +11,6 @@
 
 {{potion-list potions=model}}
 
-<p>{{link-to "Add new potion" "potions.new" class="btn btn-default"}}</p>
+<p>
+    <button {{action "showModal" "new-potion-modal" "potions.list"}} class="btn btn-default">Add new potion</button>
+</p>

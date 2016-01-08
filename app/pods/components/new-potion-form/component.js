@@ -9,10 +9,21 @@ export default Ember.Component.extend({
                 return;    
             }
             
+            /*var potion = this.$('#name').val();
+            var effect = this.$('#effect').val();
+            var ingSplit = this.$('#ingredients').val().split(',');
+            var ingTrim = [];
+            var name;
+            for(var i = 0; i < ingSplit.length; i++) {
+                name = ingSplit[i].trim();
+                ingTrim.push({name: name});
+                console.log(ingTrim);
+            }*/
+            
             this.get('onSave')({
                 name: this.$('#name').val(),
                 effect: this.$('#effect').val(),
-                ingredients: this.$('#ingredients').val()
+                ingredients: this.$('#ingredients').val().split(',')
             });
         },
     },

@@ -6,11 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('index', {path: '/'});
-
+  this.route('about', {path: '/'});
   this.route('potions', function() {
     this.route('list');
-    this.route('new');
     this.route('view', {path: '/:potion_id'});
     this.route('edit', {path: '/edit/:potion_id'});
   });
