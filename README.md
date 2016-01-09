@@ -19,7 +19,7 @@ REST API végpont - *...*
 
 ##1.3. Használatieset-modell, funkcionális követelmények
 
-1. Használati esetek:
+Használati esetek:
 A felhasználó megtekintheti a már beküldött receptek listáját. Ha az nem üres, akkor már tudja a lista egyes elemeit szerkeszteni és törölni. Új receptet beküldeni bármikor lehet.
 
 ![Használatieset diagram](docs/images/hasznalati_esetdiagram_gaktaai.png)
@@ -28,7 +28,7 @@ Egy kifejtett használati eset folyamatábrája:
 
 ![Folyamatábra](docs/images/folyamatabra_gaktaai.png)
 
-2. Funkcionális követelmények:
+Funkcionális követelmények:
 
 1. lehessen beküldeni egy bájital receptet --> recept beküldése,
 2. kapjon a felhasználó visszajelzést, hogy a beküldött receptek valóban bekerültek az adatbázisba --> receptek listázása,
