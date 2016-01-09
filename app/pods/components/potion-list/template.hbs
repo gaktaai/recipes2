@@ -10,14 +10,14 @@
         </tr>   
     </thead>
     <tbody>
-        {{#each potions}}
+        {{#each potions as |potion|}}
         <tr>
-            <td>{{name}}</td>
-            <td>{{effect}}</td>
-            <td>{{ingredients}}</td>
-            <td>{{link-to "View" "potions.view" this class="btn btn-default btn-sm"}}</td>
-            <td>{{link-to "Edit" "potions.edit" this class="btn btn-default btn-sm"}}</td>
-            <td><button {{action "deletePotion" this}} class="btn btn-danger btn-sm">Delete</button></td>
+            <td>{{potion.name}}</td>
+            <td>{{potion.effect}}</td>
+            <td>{{potion.ingredients}}</td>
+            <td>{{link-to "View" "potions.view" potion class="btn btn-default btn-sm"}}</td>
+            <td>{{link-to "Edit" "potions.edit" potion class="btn btn-default btn-sm"}}</td>
+            <td><button {{action "deletePotion" potion}} class="btn btn-danger btn-sm">Delete</button></td>
         </tr>
         {{/each}}
     </tbody>

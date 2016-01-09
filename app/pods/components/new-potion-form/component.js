@@ -8,22 +8,22 @@ export default Ember.Component.extend({
             if(!this.validate()) {
                 return;    
             }
-            
-            /*var potion = this.$('#name').val();
+            var name = this.$('#name').val();
             var effect = this.$('#effect').val();
-            var ingSplit = this.$('#ingredients').val().split(',');
-            var ingTrim = [];
-            var name;
-            for(var i = 0; i < ingSplit.length; i++) {
-                name = ingSplit[i].trim();
-                ingTrim.push({name: name});
-                console.log(ingTrim);
-            }*/
+            var ingredients = this.$('#ingredients').val();
+            
+            var ingSplit = ingredients.split(',');
+            ingredients = ingSplit[0];
+            var ingTrim;
+            for(var i = 1; i < ingSplit.length; i++) {
+                ingTrim = ingSplit[i].trim();
+                ingredients += (', ' + ingTrim);
+            }
             
             this.get('onSave')({
-                name: this.$('#name').val(),
-                effect: this.$('#effect').val(),
-                ingredients: this.$('#ingredients').val().split(',')
+                name: name,
+                effect: effect,
+                ingredients: ingredients
             });
         },
     },
